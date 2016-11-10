@@ -1,0 +1,15 @@
+%{
+open Microsoft.FSharp.Text.Lexing
+open Microsoft.FSharp.Text.Parsing
+%}
+
+%start start
+%type <Microsoft.FSharp.Text.Lexing.Position *  Microsoft.FSharp.Text.Lexing.Position> start
+
+%token A
+%token B
+%token C
+
+%%
+
+start: A B C { parseState.ResultRange }

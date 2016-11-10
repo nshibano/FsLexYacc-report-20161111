@@ -1,0 +1,9 @@
+{
+module Lexer
+open Parser
+}
+
+rule token = parse
+| 'A' { A }
+| 'B' { B }
+| 'C' { C }
